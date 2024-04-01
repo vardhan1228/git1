@@ -1,0 +1,21 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('clone') {
+            steps {
+                git branch: 'main', url: 'https://github.com/vardhan1228/git1.git'
+            }
+        }
+        stage('init') {
+            steps {
+                sh 'terraform init'
+            }
+        }
+        stage('apply') {
+            steps {
+                sh 'terraform apply -auto-approve'
+            }
+        }
+    }
+}
