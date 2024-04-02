@@ -6,6 +6,6 @@ resource "aws_instance" "dev" {
     ami = "ami-0d7a109bf30624c99"
     instance_type = "t2.medium"
     tags = {
-      Name = "dev-ec3"
+      Name = "dev-ec4"
     }
 }
